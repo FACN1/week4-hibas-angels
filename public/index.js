@@ -8,3 +8,10 @@ function makeRequest(url, callback) {
   xhr.open('GET', url);
   xhr.send();
 }
+
+// event listener
+var input = document.getElementById('input-box');
+input.addEventListener('keyup', function(event) {
+  var url = '/search?q=' + input.value;
+  makeRequest(url, renderFunction);
+});
