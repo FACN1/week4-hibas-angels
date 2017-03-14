@@ -1,10 +1,5 @@
 var http = require('http');
 var fs = require('fs');
-var server = http.createServer(handler);
-
-server.listen(3000, function(){
-  console.log("server is listing in 3000")
-});
 
 function handler (request,response){
   var url= request.url;
@@ -39,4 +34,14 @@ function handler (request,response){
       response.end(file);
     });
   }
+  else{
+    response.writeHead (404, {'Content-Type':'text/plain'});
+    response.end('the page not found');
+  }
 }
+
+var server = http.createServer(handler);
+
+server.listen(3000, function(){
+  console.log("server is listing in 3000")
+});
