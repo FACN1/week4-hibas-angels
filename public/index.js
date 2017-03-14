@@ -12,5 +12,6 @@ function makeRequest(url, callback) {
 // event listener
 var input = document.getElementById('input-box');
 input.addEventListener('keyup', function(event) {
-
+  var url = '/?word=' + input.value;
+  /*makeRequest(url, renderFunction);*/
 });
