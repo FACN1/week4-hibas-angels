@@ -1,10 +1,10 @@
-function makeRequest(url, callback){
+function makeRequest(callback){
   var xhr = new XMLHttpRequest();
-  xhr.onreadystatsechange = function(){
+  xhr.onreadystatechange = function(){
     if(xhr.readyState === 4 && xhr.status === 200){
-      callback(JSON.parse(xhr.responseText));
+      callback(err, JSON.parse(xhr.responseText));
     }
   }
-  xhr.open('GET', url);
+  xhr.open('GET','/');
   xhr.send();
 }
