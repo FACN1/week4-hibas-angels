@@ -6,7 +6,7 @@ server.listen(3000, function() {
   console.log("server is listening in 3000");
 });
 
-function handler(request,response) {
+function handler(request, response) {
   var url = request.url;
 
   if (url === "/") {
