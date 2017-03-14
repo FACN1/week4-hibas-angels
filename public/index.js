@@ -1,10 +1,3 @@
-// event listener
-var input = document.getElementById('input-box');
-input.addEventListener('keyup', function(event) {
-  var url = '/search?q=' + input.value;
-  makeRequest(url, renderFunction);
-});
-
 function makeRequest(url, callback) {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
@@ -35,3 +28,10 @@ function render(error, response) {
     ul.appendChild(list);
   });
 }
+
+// event listener
+var input = document.getElementById('input-box');
+input.addEventListener('keyup', function(event) {
+  var url = '/search?q=' + input.value;
+  makeRequest(url, renderFunction);
+});
