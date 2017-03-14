@@ -1,2 +1,9 @@
 # week4-hibas-angels
-Week 4 project repo for Hiba's Angels
+
+Hiba's Angels week 4 autocomplete project.
+
+### Local install instructions
+
+### User Stories
+
+### Useful things learnt
