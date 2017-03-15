@@ -9,9 +9,28 @@ function makeRequest(url, callback) {
   xhr.send();
 }
 
+function render(error, wordArray) {
+  // wordArray should be in array of string
+  if (error) {
+    console.log(error);
+    return;
+  }
+
+  // empty ul element
+  var ul = document.getElementById('word-list');
+  ul.innerHTML = '';
+
+  // create elements and add words
+  wordArray.forEach(function(word) {
+    var listItem = document.createElement('li');
+    listItem.innerHTML = word;
+    ul.appendChild(listItem);
+  });
+}
+
 // event listener
 var input = document.getElementById('input-box');
 input.addEventListener('keyup', function(event) {
   var url = '/search?q=' + input.value;
-  makeRequest(url, renderFunction);
+  makeRequest(url, render);
 });
