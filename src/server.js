@@ -5,27 +5,25 @@ var wordPackage = require('word-list-json');
 
 var NUM_RESULTS = 10;
 
-
 function getWords(searchTerm, wordList, maxResults) {
   var newArr = []
   if (searchTerm === ''){
     return newArr;
   }
-  searchTerm = searchTerm.toLowerCase();
+  var searchTermLowerCase = searchTerm.toLowerCase();
 
   for (var i = 0, n = wordList.length; i < n; i++) {
     var word = wordList[i];
     if (maxResults && newArr.length === maxResults) {
       break;
     }
-    if (word.startsWith(searchTerm)){
+    if (word.startsWith(searchTermLowerCase)){
         newArr.push(word);
     }
   };
 
   return newArr;
 }
-
 
 function handler(request, response) {
   var url = request.url;
