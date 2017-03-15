@@ -25,7 +25,6 @@ function render(error, wordArray) {
     var listItem = document.createElement('li');
     listItem.innerHTML = word;
     ul.appendChild(listItem);
-    console.log(listItem);
   });
 }
 
