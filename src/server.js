@@ -51,7 +51,6 @@ function handler(request, response) {
     response.writeHead(404, {'Content-Type':'text/plain'});
     response.end('the page not found');
   }
-
 }
 
 var server = http.createServer(handler);
