@@ -2,8 +2,15 @@
 
 Hiba's Angels week 4 autocomplete project.
 
-### Local Install Instructions
-- Clone the repository
+### Local Run Instructions
+- Clone the repository && cd
+- npm install
+- node src/server.js
+
+### Local Test Instructions
+- Clone the repository && cd
+- npm install
+- node tests/tests.js
 
 ### Plan
 - Navigating to the page with the browser should request index.html from the server
@@ -23,3 +30,7 @@ As a **disabled user**
 
 ### Useful Things Learnt
 - We used a `keyup` event listener on the input box - we first tried `change`, `keypress` and `keydown`, but none of them gave us the correct information at the correct time.
+
+### Stretch Goals
+- Heroku
+- more functionality, e.g. click on a word/autofill a whole sentence
