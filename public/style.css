@@ -1,0 +1,21 @@
+body {
+  background: pink;
+  text-align: center;
+  font-family: sans-serif;
+  color: white;
+}
+
+input {
+  font-size: large;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0.5em;
+  padding: 0px;
+  font-size: large;
+}
+
+li {
+  text-align: center;
+}
