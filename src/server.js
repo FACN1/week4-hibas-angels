@@ -27,6 +27,7 @@ function getWords(searchTerm, wordList, maxResults) {
 
 function handler(request, response) {
   var url = request.url;
+  console.log(url);
 
   if (url === "/") {
     response.writeHead(200, {'Content-Type':'text/html'});
@@ -51,6 +52,16 @@ function handler(request, response) {
   else if (url === "/style.css") {
     response.writeHead(200, {'Content-Type':'text/css'});
     fs.readFile(__dirname +  '/../public/style.css',function(error,file) {
+      if (error) {
+        console.log(error);
+        return;
+      };
+      response.end(file);
+    });
+  }
+  else if (url === "/pics/angel.png") {
+    response.writeHead(200, {'Content-Type':'image/png'});
+    fs.readFile(__dirname +  '/../pics/angel.png',function(error,file) {
       if (error) {
         console.log(error);
         return;
