@@ -31,6 +31,9 @@ function render(error, wordArray) {
 // event listener
 var input = document.getElementById('input-box');
 input.addEventListener('keyup', function(event) {
-  var url = '/search?q=' + input.value;
-  makeRequest(url, render);
+  var trimmedInput = input.value.trim();
+  if (trimmedInput) {
+    var url = '/search?q=' + trimmedInput;
+    makeRequest(url, render);
+  }
 });
