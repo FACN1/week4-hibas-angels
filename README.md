@@ -5,15 +5,20 @@ Hiba's Angels week 4 autocomplete project.
 ### Local Install Instructions
 - Clone the repository
 
+### Plan
+- Navigating to the page with the browser should request index.html from the server
+- Each letter typed in the input box should send a request to the server
+- The server should search the word list for some results
+- The server should respond with an array of results
+- The render function should fill the words into the list
+
 ### User Stories
 As a **user searching for something**
 > I want to type in a word
-
 > So that I can see a list of suggested words
 
 As a **disabled user**
 > I want the website to be accessible
-
 > So that I can easily understand all the information on the website
 
 ### Useful Things Learnt
