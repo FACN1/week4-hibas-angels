@@ -27,7 +27,6 @@ function getWords(searchTerm, wordList, maxResults) {
 
 function handler(request, response) {
   var url = request.url;
-  console.log(url);
 
   if (url === "/") {
     response.writeHead(200, {'Content-Type':'text/html'});
