@@ -9,7 +9,8 @@ function makeRequest(url, callback) {
   xhr.send();
 }
 
-function render(error, response) {
+function render(error, wordArray) {
+  // wordArray should be in array of string
   if (error) {
     console.log(error);
     return;
@@ -20,12 +21,11 @@ function render(error, response) {
   ul.innerHTML = '';
 
   // create elements and add words
-  response.map(function(word) {
-    var list = document.createElement('li');
-    var span = document.createElement('span');
-    span.innerHTML = word;
-    list.appendChild(span);
-    ul.appendChild(list);
+  wordArray.forEach(function(word) {
+    var listItem = document.createElement('li');
+    listItem.innerHTML = word;
+    ul.appendChild(listItem);
+    console.log(listItem);
   });
 }
 
@@ -33,5 +33,5 @@ function render(error, response) {
 var input = document.getElementById('input-box');
 input.addEventListener('keyup', function(event) {
   var url = '/search?q=' + input.value;
-  makeRequest(url, renderFunction);
+  makeRequest(url, render);
 });
