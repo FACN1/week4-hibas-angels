@@ -1,5 +1,6 @@
 var http = require('http');
 var fs = require('fs');
+var wordPackage = require('word-list-json');
 
 function getWords(letters) {
   return ["hi","hiba"];

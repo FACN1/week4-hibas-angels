@@ -27,5 +27,8 @@
   "homepage": "https://github.com/FACN1/week4-hibas-angels#readme",
   "devDependencies": {
     "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "word-list-json": "^0.2.0"
   }
 }
