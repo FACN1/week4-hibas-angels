@@ -1,0 +1,28 @@
+{
+  "name": "week4-hibas-angels",
+  "version": "1.0.0",
+  "description": "Hiba's Angels week 4 project- autocomplete!",
+  "main": "src/server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN1/week4-hibas-angels.git"
+  },
+  "keywords": [
+    "autocomplete",
+    "hiba",
+    "angels",
+    "wicked"
+  ],
+  "author": "Hiba's Angels",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN1/week4-hibas-angels/issues"
+  },
+  "homepage": "https://github.com/FACN1/week4-hibas-angels#readme"
+}
