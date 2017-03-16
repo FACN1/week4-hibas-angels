@@ -13,9 +13,9 @@ function getWords(searchTerm, wordList, maxResults) {
 
   var searchResults = wordList.filter(function(word) {
     return word.startsWith(searchTermLowerCase);
-  }).slice(0,10);
+  });
 
-  return searchResults;
+  return searchResults.slice(0, maxResults);
 }
 
 function handler(request, response) {
