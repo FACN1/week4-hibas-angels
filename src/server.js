@@ -22,7 +22,7 @@ function getWords(searchTerm, wordList, maxResults) {
     }
   };
 
-  return newArr;
+  return searchResults;
 }
 
 function handler(request, response) {
