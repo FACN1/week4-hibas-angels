@@ -16,16 +16,22 @@ function render(error, wordArray) {
     return;
   }
 
-  // empty ul element
-  var ul = document.getElementById('word-list');
-  ul.innerHTML = '';
+  // empty ul container
+  var ulContainer = document.getElementById('word-list-container');
+  ulContainer.innerHTML = '';
+
+  // create new ul
+  var resultsList = document.createElement('ul');
+  resultsList.id = 'word-list';
 
   // create elements and add words
   wordArray.forEach(function(word) {
     var listItem = document.createElement('li');
     listItem.innerHTML = word;
-    ul.appendChild(listItem);
+    resultsList.appendChild(listItem);
   });
+
+  ulContainer.appendChild(resultsList);
 }
 
 // event listener
