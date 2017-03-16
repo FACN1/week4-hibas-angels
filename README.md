@@ -22,10 +22,12 @@ Hiba's Angels week 4 autocomplete project.
 ### User Stories
 As a **user searching for something**
 > I want to type in a word
+
 > So that I can see a list of suggested words
 
 As a **disabled user**
 > I want the website to be accessible
+
 > So that I can easily understand all the information on the website
 
 ### Useful Things Learnt
