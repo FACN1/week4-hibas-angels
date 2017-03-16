@@ -1,7 +1,7 @@
 body {
   background: pink;
   text-align: center;
-  font-family: CenturyGothic;
+  font-family: CenturyGothic, sans-serif;
   color: white;
 }
 
