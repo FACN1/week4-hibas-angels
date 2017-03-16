@@ -1,21 +1,14 @@
 function getWords(searchTerm, wordList, maxResults) {
-  var searchResults = []
   if (searchTerm === ''){
-    return searchResults;
+    return [];
   }
   var searchTermLowerCase = searchTerm.toLowerCase();
 
-  for (var i = 0, n = wordList.length; i < n; i++) {
-    var word = wordList[i];
-    if (maxResults && searchResults.length === maxResults) {
-      break;
-    }
-    if (word.startsWith(searchTermLowerCase)){
-      searchResults.push(word);
-    }
-  };
+  var searchResults = wordList.filter(function(word) {
+    return word.startsWith(searchTermLowerCase);
+  });
 
-  return searchResults;
+  return searchResults.slice(0, maxResults);
 }
 
 module.exports = {
