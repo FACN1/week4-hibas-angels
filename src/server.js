@@ -6,21 +6,14 @@ var wordPackage = require('word-list-json');
 var NUM_RESULTS = 10;
 
 function getWords(searchTerm, wordList, maxResults) {
-  var searchResults = []
   if (searchTerm === ''){
-    return searchResults;
+    return [];
   }
   var searchTermLowerCase = searchTerm.toLowerCase();
 
-  for (var i = 0, n = wordList.length; i < n; i++) {
-    var word = wordList[i];
-    if (maxResults && searchResults.length === maxResults) {
-      break;
-    }
-    if (word.startsWith(searchTermLowerCase)){
-      searchResults.push(word);
-    }
-  };
+  var searchResults = wordList.filter(function(word) {
+    return word.startsWith(searchTermLowerCase);
+  }).slice(0,10);
 
   return searchResults;
 }
