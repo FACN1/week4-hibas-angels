@@ -58,6 +58,16 @@ function handler(request, response) {
       response.end(file);
     });
   }
+  else if (url === "/pics/angel.png") {
+    response.writeHead(200, {'Content-Type':'image/png'});
+    fs.readFile(__dirname +  '/../pics/angel.png',function(error,file) {
+      if (error) {
+        console.log(error);
+        return;
+      };
+      response.end(file);
+    });
+  }
   else if (url.includes("/search")) {
     // we want the value after equals sign
     var searchTerm = url.split('=')[1];
