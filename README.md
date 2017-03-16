@@ -5,12 +5,12 @@ Hiba's Angels week 4 autocomplete project.
 ### Local Run Instructions
 - Clone the repository && cd
 - npm install
-- node src/server.js
+- npm start
 
 ### Local Test Instructions
 - Clone the repository && cd
 - npm install
-- node tests/tests.js
+- npm test
 
 ### Plan
 - Navigating to the page with the browser should request index.html from the server
