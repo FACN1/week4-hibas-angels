@@ -35,5 +35,7 @@ input.addEventListener('keyup', function(event) {
   if (trimmedInput) {
     var url = '/search?q=' + trimmedInput;
     makeRequest(url, render);
+  }else{
+    document.getElementById('word-list').innerHTML='';
   }
 });
