@@ -5,8 +5,7 @@ var wordPackage = require('word-list-json');
 
 var helpers = require('./helpers');
 
-var NUM_RESULTS = 10;
-
+var NUM_RESULTS = 10
 
 function handler(request, response) {
   var url = request.url;
