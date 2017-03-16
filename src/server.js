@@ -3,20 +3,7 @@ var fs = require('fs');
 
 var wordPackage = require('word-list-json');
 
-var NUM_RESULTS = 10;
-
-function getWords(searchTerm, wordList, maxResults) {
-  if (searchTerm === ''){
-    return [];
-  }
-  var searchTermLowerCase = searchTerm.toLowerCase();
-
-  var searchResults = wordList.filter(function(word) {
-    return word.startsWith(searchTermLowerCase);
-  });
-
-  return searchResults.slice(0, maxResults);
-}
+var helpers = require('./helpers');
 
 function handler(request, response) {
   var url = request.url;
@@ -65,7 +52,7 @@ function handler(request, response) {
     // we want the value after equals sign
     var searchTerm = url.split('=')[1];
     // the result of the client search (its an array of words)
-    var wordArray = getWords(searchTerm, wordPackage, NUM_RESULTS);
+    var wordArray = helpers.getWords(searchTerm, wordPackage, NUM_RESULTS);
     // we send the response
     response.writeHead(200, {'Content-Type':'text/plain'});
     response.end(JSON.stringify(wordArray));
